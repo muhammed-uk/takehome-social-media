@@ -6,6 +6,10 @@ require_relative 'social_media/base'
 require_relative 'social_media/fetch_data'
 require_relative 'social_media/apps/twitter'
 require_relative 'social_media/apps/facebook'
+require_relative 'social_media/lib/core_extensions/string/formatting'
+
+# Patches
+String.prepend CoreExtensions::String::Formatting
 
 # Port Configuration
 set :port, 3000
